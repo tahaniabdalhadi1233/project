@@ -9,7 +9,7 @@ import HomePage from "pages/homePage";
 import ServiceDetailesPage from "pages/servicePage";
 import Page from "pages/page";
 import ScrollToTop from "components/scrollToTop";
- 
+
 const App = () => {
   useEffect(() => {
     Aos.init({});
