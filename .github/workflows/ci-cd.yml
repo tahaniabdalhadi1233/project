@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -22,6 +21,7 @@ jobs:
         run: npm install
       - name: Run linter
         run: npm run lint
+        # If you haven't set up ESLint yet, see https://eslint.org/docs/latest/user-guide/getting-started
 
   security-scan:
     runs-on: ubuntu-latest
@@ -54,35 +54,32 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
-
   build:
-    needs: [lint, security-scan, test]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with: 
-          node-version: 16
-      - run: npm install
-      - run: npm run build
-      - uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/
+  needs: [lint, security-scan, test]
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with: { node-version: 16 }
+    - run: npm install
+    - run: npm run build
+    - uses: actions/upload-artifact@v4
+      with:
+        name: dist
+        path: build/  # أو أي مسار آخر يطابق مجلد الملفات المجهزة
 
   release:
-    needs: build
-    runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # provided automatically by GitHub
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/download-artifact@v4
-        with: 
-          name: dist
-      - id: create_release
-        uses: elgohr/Github-Release-Action@v5
-        with:
-          title: Dev Build ${{ github.sha }}
-          tag: dev-${{ github.sha }}
-          prerelease: true
+  needs: build
+  runs-on: ubuntu-latest
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # provided automatically by GitHub
+  steps:
+    - uses: actions/checkout@v3
+    - uses: actions/download-artifact@v4
+      with: { name: dist }
+    - id: create_release
+      uses: elgohr/Github-Release-Action@v5
+      with:
+        title: Dev Build ${{ github.sha }}
+        tag: dev-${{ github.sha }}
+        prerelease: true
