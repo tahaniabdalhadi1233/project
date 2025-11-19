@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ gh-pages ]
     types: [ opened, synchronize ]
 
 permissions:
