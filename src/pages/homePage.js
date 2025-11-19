@@ -14,8 +14,7 @@ const HomePage = () => {
     <SplashScreen/>
     
        <HeroSection />
-        <HeroSection />
-      <About />
+       <About />
       <Features />
       <ServicesSection />
        <ContactSection />

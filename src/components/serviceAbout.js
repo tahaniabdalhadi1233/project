@@ -10,7 +10,7 @@ const FeatureItem = ({ icon, title, description, delay }) => (
       style={{ fontSize: "28px" }}
     ></i>
     <div className="     ">
-      <p className="font-semibold text-lg text-heading-color mb-0"  >{title}</p>
+      <p className="font-semibold text-lg text-heading-color mb-0">{title}</p>
       <p className="leading-loose mb-0 ">{description}</p>
     </div>
   </div>
@@ -18,7 +18,7 @@ const FeatureItem = ({ icon, title, description, delay }) => (
 
 const About = ({ service }) => {
   return (
-    <section  className="about section">
+    <section className="about section">
       {/* Section Title */}
 
       <div className="container">
@@ -29,7 +29,7 @@ const About = ({ service }) => {
             data-aos-delay="100"
           >
             <img
-              style={{    width: "100%" }}
+              style={{ width: "100%" }}
               src={service.image}
               className="img-fluid rounded-xl md:h-120"
               alt=""
@@ -41,7 +41,9 @@ const About = ({ service }) => {
             data-aos-delay="250"
           >
             <div className=" py-4 ps-0 ps-lg-5 d-flex flex-column">
-              <p className="font-semibold text-lg   leading-loose mb-0">{service.description} </p>
+              <p className="font-semibold text-lg   leading-loose mb-0">
+                {service.description}{" "}
+              </p>
               <div className="position-relative mt-2">
                 {service.features.map((feature, index) => (
                   <FeatureItem
