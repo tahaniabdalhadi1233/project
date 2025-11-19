@@ -40,7 +40,7 @@ jobs:
           languages: javascript
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
-
+               
   test:
     runs-on: ubuntu-latest
     steps:
@@ -54,6 +54,7 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
+         
 build:
   needs: [lint, security-scan, test]
   runs-on: ubuntu-latest
