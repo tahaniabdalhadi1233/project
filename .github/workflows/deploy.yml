@@ -42,10 +42,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         
         with:
-          github_token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           target_branch: master
           build_dir: build
           publish_branch: gh-pages  # تأكد أن هذا فرع النشر الصحيح
-
-        env:
-          github_token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
+ 
