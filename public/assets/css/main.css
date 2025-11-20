@@ -11,20 +11,18 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
- @import "tailwindcss";
+@import "tailwindcss";
 :root {
-/*  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /*  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;*/
-    --default-font: "Cairo", sans-serif;
+  --default-font: "Cairo", sans-serif;
   --heading-font: "Amiri", sans-serif; /* استبدال الخط هنا */
-
 }
 * {
- 
- }
+}
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
@@ -35,12 +33,21 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.8);  /* The default color of the main navmenu links */
-  --nav-hover-color: var(--accent-color); /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* The default color of the main navmenu links */
+  --nav-hover-color: var(
+    --accent-color
+  ); /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #555555; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: var(--accent-color); /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: var(
+    --accent-color
+  ); /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -106,7 +113,10 @@ h6 {
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
+  background: radial-gradient(
+    var(--accent-color) 50%,
+    color-mix(in srgb, var(--accent-color), transparent 75%) 52%
+  );
   border-radius: 50%;
   display: block;
   position: relative;
@@ -195,7 +205,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background:var(--accent-color);
+  background: var(--accent-color);
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -239,7 +249,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding-top: 40px  ;
+  padding-top: 40px;
   position: relative;
 }
 
@@ -260,16 +270,17 @@ h6 {
   margin-bottom: 0px;
 }
 .footer .a {
-color: var(--default-color);
+  color: var(--default-color);
 }
 .footer .a:hover {
   color: var(--accent-color);
 }
-.hover\:accentColor:hover{
+.hover\:accentColor:hover {
   color: var(--accent-color);
 }
-.default-color
-{  color: var(--default-color);}
+.default-color {
+  color: var(--default-color);
+}
 .footer .social-links a {
   display: flex;
   align-items: center;
@@ -292,7 +303,8 @@ color: var(--default-color);
 .footer .copyright {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -303,7 +315,6 @@ color: var(--default-color);
   margin-top: 5px;
   font-size: 13px;
 }
-
 
 /*-------------------------------------------------------------
  .footer {
@@ -509,7 +520,8 @@ color: var(--default-color);
 
 .page-title .heading {
   padding: 80px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .page-title .heading h1 {
@@ -531,11 +543,11 @@ color: var(--default-color);
   font-weight: 600;
 }
 
-.page-title nav ol li+li {
+.page-title nav ol li + li {
   padding-left: 10px;
 }
 
-.page-title nav ol li+li::before {
+.page-title nav ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -555,7 +567,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 100px;
@@ -672,28 +683,24 @@ section,
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
- 
 
 .why-us .features-item h4 {
   font-size: 1.5rem;
   font-weight: 700;
-     color: var(--heading-color);
-
+  color: var(--heading-color);
 }
 
 .why-us .features-item i {
-  font-size: 48px;
+  /* font-size: 48px;*/
   color: var(--accent-color);
   margin-right: 20px;
   line-height: 0;
 }
 
 .why-us .features-item p {
-   color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
 }
-
- 
 
 /*--------------------------------------------------------------
 # Clients Section
@@ -729,7 +736,7 @@ section,
   background-color: var(--accent-color);
 }
 
- /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
@@ -772,7 +779,7 @@ section,
   border: 2px solid var(--accent-color);
 }
 
- /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-wrap {
@@ -792,41 +799,44 @@ section,
 }
 
 .contact .info-item i {
-  font-size: 20px;
+  font-size: 28px;
   color: var(--accent-color);
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  width: 44px;
-  height: 44px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 10px;
   transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
+  margin-left: 6px;
+    margin-right: 6px;
+
+    margin-top: 0px;
+
+ }
 
 .contact .info-item h3 {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 .contact .info-item a {
-    color: var(--default-color);
+  color: var(--default-color);
 
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 .contact .info-item :hover a {
-     color: var(--accent-color);
-
+  color: var(--accent-color);
 }
 .contact .info-item:hover i {
   background: var(--accent-color);
@@ -846,8 +856,8 @@ section,
   }
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -858,19 +868,20 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
+  transition: transform 0.3s ease, opacity 0.3s ease; /* تأثير انتقالي للـ placeholder */
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -879,11 +890,10 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
- 
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
@@ -891,40 +901,11 @@ section,
   /* Add your styles here */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .mission-vision-row {
+.mission-vision-row {
   margin-top: 2rem;
 }
 
-  .mission-vision-row .value-card {
+.mission-vision-row .value-card {
   background-color: var(--surface-color);
   border-radius: 15px;
   padding: 2rem;
@@ -935,7 +916,7 @@ section,
   z-index: 1;
 }
 
- .mission-vision-row .value-card:before {
+.mission-vision-row .value-card:before {
   content: "";
   position: absolute;
   top: 0;
@@ -947,23 +928,23 @@ section,
   z-index: -1;
 }
 
-  .mission-vision-row .value-card:hover {
+.mission-vision-row .value-card:hover {
   transform: translateY(-10px);
 }
 
- .mission-vision-row .value-card:hover:before {
+.mission-vision-row .value-card:hover:before {
   height: 100%;
 }
 
- .mission-vision-row .value-card:hover .card-icon {
+.mission-vision-row .value-card:hover .card-icon {
   background-color: var(--accent-color);
 }
 
-  .mission-vision-row .value-card:hover .card-icon i {
+.mission-vision-row .value-card:hover .card-icon i {
   color: var(--contrast-color);
 }
 
-  .mission-vision-row .value-card .card-icon {
+.mission-vision-row .value-card .card-icon {
   width: 60px;
   height: 60px;
   display: flex;
@@ -975,13 +956,13 @@ section,
   transition: all 0.3s ease;
 }
 
- .mission-vision-row .value-card .card-icon i {
+.mission-vision-row .value-card .card-icon i {
   font-size: 1.75rem;
   color: var(--accent-color);
   transition: color 0.3s ease;
 }
 
- .mission-vision-row .value-card h3 {
+.mission-vision-row .value-card h3 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -992,8 +973,6 @@ section,
   margin-bottom: 0;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
-
-
 
 /*--------------------------------------------------------------
 
@@ -1073,7 +1052,6 @@ section,
   }
 }
 
-
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
@@ -1092,9 +1070,6 @@ section,
   z-index: 1;
 }
 
-
-
-
 /* .features .features-item h4 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
@@ -1102,11 +1077,9 @@ section,
   color: var(--heading-color);
 }*/
 
- 
 .feature-icon {
   margin-right: 20px; /* المسافة بين الأيقونة والمحتوى */
-    margin-left: 20px; /* المسافة بين الأيقونة والمحتوى */
-
+  margin-left: 20px; /* المسافة بين الأيقونة والمحتوى */
 }
 
 .feature-content h4 {
@@ -1121,7 +1094,8 @@ section,
   padding: 60px 30px 80px;
   background-color: var(--surface-color);
   border-radius: 12px;
-  box-shadow: 0 10px 25px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 10px 25px
+    color-mix(in srgb, var(--default-color), transparent 90%);
   transition: all 0.3s ease;
 }
 
@@ -1205,7 +1179,8 @@ section,
 
 .services .service-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 14px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 14px 30px
+    color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .services .service-item:hover .service-icon {
@@ -1249,114 +1224,111 @@ section,
 }
 
 .alt-services .service-card {
-    background-color: var(--surface-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    border-radius: 8px;
-    overflow: hidden;
-    height: 100%;
-    transition: all 0.4s ease;
-    position: relative;
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.4s ease;
+  position: relative;
 }
 
 .alt-services .service-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), var(--heading-color) 30%)
+  );
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
 }
 
 .alt-services .service-card:hover::before {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .alt-services .service-card.featured {
-    border-color: var(--accent-color);
-    box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 85%);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px
+    color-mix(in srgb, var(--accent-color), transparent 85%);
 }
 
 .alt-services .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 85%);
-    border-color: var(--accent-color);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px
+    color-mix(in srgb, var(--default-color), transparent 85%);
+  border-color: var(--accent-color);
 }
 
 .alt-services .service-card .card-header {
-    text-align: center;
+  text-align: center;
 }
 
 .alt-services .service-card .card-header h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--heading-color);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--heading-color);
 }
 
 .alt-services .service-card .card-body {
-    padding: 0; /* إزالة الحشو العلوي */
+  padding: 0; /* إزالة الحشو العلوي */
 }
 
 .alt-services .service-card .card-body p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: color-mix(in srgb, var(--default-color), transparent 20%);
-    text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  text-align: center;
 }
 
 .alt-services .service-card .feature-image {
-    width: 100%;
-    height: 250px;
-    border-radius: 8px;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
 }
 
 .alt-services .service-card .feature-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 .alt-services .service-card:hover .feature-image img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .alt-services .service-card .card-footer {
-    padding: 15px 25px 25px;
+  padding: 15px 25px 25px;
 }
 
 .alt-services .service-card .btn-explore {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 12px 20px;
-    background: transparent;
-    border: 2px solid color-mix(in srgb, var(--accent-color), transparent 70%);
-    border-radius: 8px;
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+  border-radius: 8px;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .alt-services .service-card .btn-explore:hover {
-    background: var(--accent-color);
-    color: var(--contrast-color);
-
-
-
-
-
-  }
-
-
-
-
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
 
 /*--------------------------------------------------------------
 # Global Header
@@ -1391,7 +1363,7 @@ section,
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: var(--nav-color);
+  color: var(--contrast-color);
   background: var(--accent-color);
   font-size: 13px;
   font-weight: 500;
@@ -1405,7 +1377,7 @@ section,
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--nav-color);
+  color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
@@ -1415,13 +1387,13 @@ section,
   }
 
   .header .btn-getstarted {
-    order: 3;
+    order: 2;
     margin: 0 15px 0 0;
     padding: 6px 15px;
   }
 
   .header .navmenu {
-    order: 2;
+    order: 3;
   }
 }
 
@@ -1439,7 +1411,7 @@ section,
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 0px) {
+@media (min-width: 1200px) {
   .navmenu {
     padding: 0;
   }
@@ -1483,7 +1455,7 @@ section,
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -1522,11 +1494,11 @@ section,
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -1538,7 +1510,7 @@ section,
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -1546,7 +1518,7 @@ section,
   }
 }
 
-/* 
+/* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -1641,7 +1613,7 @@ section,
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -1668,11 +1640,10 @@ section,
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Gallery Section
@@ -1722,20 +1693,19 @@ section,
   }
 }
 
-
 /*--------------------------------------------------------------
 
 /*--------------------------------------------------------------
 # MAIN SECTION 
---------------------------------------------------------------*/
+  -------------------------------------------------------------*/
+
 .main-section {
-  padding:90px 0;
+   padding: 90px 0;
   position: relative;
   clip-path: inset(0);
-}
+ }
 
 .main-section img {
-	
   position: fixed;
   top: 0;
   left: 0;
@@ -1748,10 +1718,9 @@ section,
 
 .main-section:before {
   content: "";
-  /*background: var(--default-color);
-    opacity: 0.8;   قم بتحديد مستوى الشفافية هنا */
+  
   background: color-mix(in srgb, var(--background-color), transparent 15%);
-
+   overflow: hidden;
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1771,50 +1740,71 @@ section,
 .main-section p {
   color: var(--default-color);
 }
-
-.main-section .cta-btn {
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 5px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid var(--default-color);
-  color: var(--default-color);
+/*.main-section {
+   margin: 10px;
+   padding: 90px 0;
+   position: relative;
+   border-radius: 10px;  
+   overflow: hidden; 
 }
 
-.main-section .cta-btn:hover {
-  background: var(--accent-color);
-  color: var(--background-color);
-  border: 2px solid var(--accent-color);
+.main-section img {
+   position: absolute; 
+   top: 0;
+   left: 0;
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: 1;
 }
- /*WHATSAPP BUTTON -----------------------------------------------------------------
+
+.main-section:before {
+   content: "";
+   background: color-mix(in srgb, var(--background-color), transparent 15%);
+   border-radius: 10px; 
+   position: absolute;
+   inset: 0;
+   z-index: 2;
+}
+
+.main-section .container {
+   position: relative;
+   z-index: 3;
+}
+
+.main-section h3 {
+   font-size: 28px;
+   font-weight: 700;
+   color: var(--default-color);
+}
+
+.main-section p {
+   color: var(--default-color);
+}*/
+/*WHATSAPP BUTTON -----------------------------------------------------------------
 ---------------------------------------------------------------------------------*/
 .whatsapp-button {
-		position: fixed;
-		bottom: 20px; /* المسافة من الأسفل */
-		left: 20px; /* المسافة من اليسار */
-		z-index: 1000; /* تأكد من أن الزر فوق العناصر الأخرى */
-	}
-	
-	.whatsapp-button img {
-		width: 60px; /* حجم الزر */
-		height: 60px; /* حجم الزر */
-	}
-	
-  
+  position: fixed;
+  bottom: 20px; /* المسافة من الأسفل */
+  left: 20px; /* المسافة من اليسار */
+  z-index: 1000; /* تأكد من أن الزر فوق العناصر الأخرى */
+}
+
+.whatsapp-button img {
+  width: 60px; /* حجم الزر */
+  height: 60px; /* حجم الزر */
+}
+
 /*---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------*/
-.text-prim{
-	--tw-text-opacity: 1 !important;
-  color: var(--accent-color);}
+.text-prim {
+  --tw-text-opacity: 1 !important;
+  color: var(--accent-color);
+}
 
- .text-heading-color {
-      color: var(--heading-color);
-
+.text-heading-color {
+  color: var(--heading-color);
 }
 /*--------------------------------------------------------------
 # Events Section
@@ -1925,7 +1915,11 @@ section,
 
 .services-2 .service-item:before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 50%
+  );
   top: 0;
   left: 0;
   right: 0;
@@ -2024,11 +2018,14 @@ section,
   border-radius: 0;
   width: 20px;
   height: 4px;
-  background-color: color-mix(in srgb, var(--background-color), transparent 80%) !important;
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 80%
+  ) !important;
   opacity: 1;
 }
 
 .services-2 .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color) !important;
 }
-

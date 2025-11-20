@@ -1318,6 +1318,32 @@ Use a better box model (opinionated).
     padding-bottom: 0.25rem !important;
   }
 
+   .sm\:text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 3.2rem !important;
+  }
+  .sm\:text-3xl {
+    font-size: 1.875rem !important;
+  }
+  .sm\:text-sm {
+    font-size: 0.875rem !important;
+  }
+  .sm\:text-2xl {
+    font-size: 1.5rem !important;
+  }
+  .sm\:text-xl {
+    font-size: 1.25rem !important;
+  }
+  .sm\:text-lg {
+    font-size: 1.125rem !important;
+  }
+  .sm\:text-5xl {
+    font-size: 3rem !important;
+    line-height: 4rem !important;
+  }
+  .sm\:text-base {
+    font-size: 1rem !important;
+  }
   .sm\:text-2xl {
     font-size: 1.5rem !important;
   }
@@ -1327,6 +1353,8 @@ Use a better box model (opinionated).
   .sm\:text-sm {
     font-size: 0.875rem !important;
   }
+
+
 }
 @media (min-width: 400px) {
   .sm1\:h-64 {
@@ -1516,8 +1544,9 @@ Use a better box model (opinionated).
     margin-bottom: 0rem !important;
   }
   .lg\:h-120 {
-    height: 30rem !important;
+    height:30rem !important;
   }
+   
   .lg\:absolute {
     position: absolute !important;
   }
