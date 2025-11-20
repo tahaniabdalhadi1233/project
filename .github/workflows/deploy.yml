@@ -27,25 +27,19 @@ jobs:
           publish_dir: ./build
           publish_branch: gh-pages  # تأكد أن هذا فرع النشر الصحيح
 
+jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the project
-        run: npm run build
+      - name: Build project
+        run: npm install && npm run build  # قم ببناء المشروع
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: gh-pages
-          build_dir: build
-          publish_branch: gh-pages  #   أن هذا فرع النشر الصحيح
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # استخدم GitHub Token
+          publish_dir: ./build  # أدخل المسار الصحيح للمجلد المبني
  
