@@ -47,5 +47,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           target_branch: master
           build_dir: build
-          publish_branch: gh-pages  # تأكد أن هذا فرع النشر الصحيح
+          publish_branch: gh-pages  #   أن هذا فرع النشر الصحيح
  
