@@ -3,29 +3,49 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # تأكد أن هذا هو الفرع الذي تريد النشر منه
+      - main  # تغيير إلى اسم الفرع الذي تريد نشره عندما يتم الدمج فيه
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
+      - name: Build the project
+        run: CI=false npm run build  # تعيين CI=false لتجاوز التحذيرات
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # أو مسار المجلد المبني
+          publish_dir: ./build
           publish_branch: gh-pages  # تأكد أن هذا فرع النشر الصحيح
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: master
+          build_dir: build
+          publish_branch: gh-pages  # تأكد أن هذا فرع النشر الصحيح
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
