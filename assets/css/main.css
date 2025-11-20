@@ -1325,7 +1325,7 @@ section,
   font-size: 14px;
   transition: all 0.3s ease;
 }
-.alt-services .service-card:hover .btn-explore {
+.alt-services .service-card:hover .btn-explore  {
   background: var(--accent-color);
   color: var(--contrast-color);
 
