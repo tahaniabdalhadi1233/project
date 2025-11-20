@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages  # تغيير إلى اسم الفرع الذي تريد نشره عندما يتم الدمج فيه
+      - gh-pages  #   إلى اسم الفرع الذي تريد نشره عندما يتم الدمج فيه
 permissions:
   contents: write
 
