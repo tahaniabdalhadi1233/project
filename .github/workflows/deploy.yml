@@ -27,7 +27,6 @@ jobs:
           publish_dir: ./build
           publish_branch: gh-pages  # تأكد أن هذا فرع النشر الصحيح
 
-jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
