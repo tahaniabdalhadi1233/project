@@ -7,14 +7,16 @@ const ServiceCard = ({ title, description, image, delay, id }) => (
         <div className="service-card" data-aos="zoom-in" data-aos-delay={delay}>
             <div className="card-body">
                 <div className="feature-image">
-                    <img src={image} alt={title} className="img-fluid" />
+                    <img src={image} alt={title} className="bg-cover w-full  " 
+                    style={{height:"260px"}}
+                    />
                 </div>
                 <p>{description}</p>
             </div>
-            <div className="h-24 p-4 text-center">
+            <div className="h-20 p-4 text-center">
                 <p className='font-bold text-base text-heading-color'>{title}</p>
             </div>
-            <div className="card-footer">
+            <div className="card-footer mt-0">
                 <Link to={`/service/${id}`} className="btn-explore ">
                    عرض التفاصيل
                     <i className=" mr-1 bi bi-arrow-up-right"></i>
