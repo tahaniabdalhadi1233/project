@@ -36,6 +36,7 @@ const App = () => {
           href="https://wa.me/+963938525704"
           className="whatsapp-button hover-up-5"
           target="_blank"
+          rel="noreferrer"
         >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
