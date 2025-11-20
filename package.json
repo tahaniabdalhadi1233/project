@@ -30,10 +30,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false && npm run build",   
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-       "predeploy": "CI=false && npm run build",
+       "predeploy": "npm run build",
 "deploy": "gh-pages-clean && gh-pages -d build -r https://github.com/tahaniabdalhadi1233/project.git"
 
   },
