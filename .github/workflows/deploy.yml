@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - gh-pages  # تغيير إلى اسم الفرع الذي تريد نشره عندما يتم الدمج فيه
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -43,9 +45,7 @@ jobs:
         
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: master
+          target_branch: gh-pages
           build_dir: build
-          publish_branch: gh-pages  # تأكد أن هذا فرع النشر الصحيح
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages  #   أن هذا فرع النشر الصحيح
+ 
