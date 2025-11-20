@@ -18,7 +18,7 @@ const ServiceCard = ({ title, description, image, delay, id }) => (
             </div>
             <div className="card-footer mt-0">
                 <Link to={`/service/${id}`} className="btn-explore ">
-                  . عرض التفاصيل
+                   عرض التفاصيل
                     <i className=" mr-1 bi bi-arrow-up-right"></i>
                 </Link>
             </div>
