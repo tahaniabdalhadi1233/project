@@ -6,7 +6,6 @@ on:
       - gh-pages  # تغيير إلى اسم الفرع الذي تريد نشره عندما يتم الدمج فيه
 
 jobs:
-jobs:
   build:
     runs-on: ubuntu-latest
     steps:
