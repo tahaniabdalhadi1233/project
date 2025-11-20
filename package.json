@@ -16,6 +16,7 @@
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.24",
+    "gh-pages": "^6.3.0",
     "isotope-layout": "^3.0.6",
     "motion": "^12.23.24",
     "react": "^19.1.0",
@@ -33,14 +34,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-       "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-   
-"homepage": "http://zhajjali.com",
-
-
+  "homepage": "http://zhajjali.com",
   "eslintConfig": {
     "extends": [
       "react-app",
