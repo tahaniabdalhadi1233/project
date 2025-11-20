@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # تغيير إلى اسم الفرع الذي تريد نشره عندما يتم الدمج فيه
+permissions:
+  contents: write
 
 jobs:
   build:
