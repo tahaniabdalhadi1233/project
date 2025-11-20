@@ -1306,7 +1306,6 @@ section,
   transform: scale(1.1);
 }
 
-
 .alt-services .service-card .card-footer {
   padding: 15px 25px 25px;
 }
@@ -1324,11 +1323,6 @@ section,
   font-weight: 600;
   font-size: 14px;
   transition: all 0.3s ease;
-}
-.alt-services .service-card:hover .btn-explore  {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-
 }
 
 .alt-services .service-card .btn-explore:hover {
