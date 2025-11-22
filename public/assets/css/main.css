@@ -799,7 +799,7 @@ section,
 }
 
 .contact .info-item i {
-  font-size: 28px;
+  font-size:  28px; 
   color: var(--accent-color);
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
   width: 70px;
