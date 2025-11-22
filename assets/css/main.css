@@ -799,7 +799,7 @@ section,
 }
 
 .contact .info-item i {
-  font-size: 24px;
+  font-size: 28px;
   color: var(--accent-color);
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
   width: 70px;
@@ -809,27 +809,30 @@ section,
   align-items: center;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
-  margin-right: 18px;
+  margin-left: 6px;
+  margin-right: 6px;
+
+  margin-top: 0px;
 }
 
 .contact .info-item h3 {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 .contact .info-item a {
   color: var(--default-color);
 
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 .contact .info-item :hover a {
   color: var(--accent-color);
@@ -1696,10 +1699,10 @@ section,
   -------------------------------------------------------------*/
 
 .main-section {
-   padding: 90px 0;
+  padding: 90px 0;
   position: relative;
   clip-path: inset(0);
- }
+}
 
 .main-section img {
   position: fixed;
@@ -1714,9 +1717,9 @@ section,
 
 .main-section:before {
   content: "";
-  
+
   background: color-mix(in srgb, var(--background-color), transparent 15%);
-   overflow: hidden;
+  overflow: hidden;
   position: absolute;
   inset: 0;
   z-index: 2;

@@ -182,9 +182,8 @@
   function navmenuScrollspy() {
     navmenulinks.forEach((navmenulink) => {
       if (!navmenulink.hash) return;
-      let sectionSelector = navmenulink.hash.replace("#/", "#");
+      let sectionSelector = navmenulink.hash.replace("#/#", "#");
       let section = document.querySelector(sectionSelector);
-
       if (!section) return;
       let position = window.scrollY + 200;
       if (
