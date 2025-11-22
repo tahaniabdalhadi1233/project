@@ -29,8 +29,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/service/:id" element={<ServiceDetailesPage />} />
-          <Route path="/p" element={<Page />} />
-        </Routes>
+         </Routes>
         <Footer />
         <a
           href="https://wa.me/+963938525704"
