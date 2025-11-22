@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useParams } from "react-router-dom";
 import services from "data/servicesList";
@@ -11,6 +11,15 @@ import SplashScreen from "components/preloaderScreen";
 
   const service = services[Number(id) - 1];
 
+   useEffect(() => {
+     
+  
+      const script = document.createElement("script");
+      script.src = "./assets/js/main2.js";
+      script.async = true;
+      script.defer = true;
+      document.body.append(script);
+    }, []);
   return (
     <>
     <div>
