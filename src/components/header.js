@@ -5,13 +5,13 @@ const Header = () => {
   const [activePage, setActivePage] = useState('');
 
   useEffect(() => {
-    const hash = window.location.pathname;
-    if (hash.includes('/service/')) {
+    const hash = window.location.hash;
+    if (hash.includes('#/service/')) {
       setActivePage('service');
     } else {
       setActivePage('home');
     }
-
+console.log(" hhh ",hash)
     const toggleScrolled = () => {
       const selectBody = document.querySelector("body");
       const selectHeader = document.querySelector("#header");

@@ -3,7 +3,7 @@ import Header from "./components/header";
 import "./App.css";
 
 import Aos from "aos";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "components/footer";
 import HomePage from "pages/homePage";
 import ServiceDetailesPage from "pages/servicePage";
