@@ -810,10 +810,11 @@ section,
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
   margin-left: 6px;
-  margin-right: 6px;
+    margin-right: 6px;
 
-  margin-top: 0px;
-}
+    margin-top: 0px;
+
+ }
 
 .contact .info-item h3 {
   padding: 0;
@@ -1699,10 +1700,10 @@ section,
   -------------------------------------------------------------*/
 
 .main-section {
-  padding: 90px 0;
+   padding: 90px 0;
   position: relative;
   clip-path: inset(0);
-}
+ }
 
 .main-section img {
   position: fixed;
@@ -1717,9 +1718,9 @@ section,
 
 .main-section:before {
   content: "";
-
+  
   background: color-mix(in srgb, var(--background-color), transparent 15%);
-  overflow: hidden;
+   overflow: hidden;
   position: absolute;
   inset: 0;
   z-index: 2;
